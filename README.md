@@ -1,6 +1,6 @@
 # suuid
 
-This is just a class that provides a simple functionality: representing a uuid with less characters than it's standard form. 
+`suuid.SUUID` is just a class that provides a simple functionality: representing a uuid with less characters than it's standard form. 
 Provided representation is in base 64 so it can be safely used in URLs.
 
 For example the uuid:
