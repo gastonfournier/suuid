@@ -15,6 +15,16 @@ which is 10 characters less than it's standard representation (I'm not counting 
 
 If this not satisfies your needs, I recommend you looking at this library: http://hashids.org/java/
 
+# How to use it
+
+*TODO:* import maven dependency. By the moment copy&paste class or checkout the project and import.
+
+* Create a SUUID from an existing UUID: `new SUUID(uuid);`
+* Create a random SUUID: `SUUID.randomSUUID()`
+* Create a SUUID from two longs (analog to UUID constructor): `new SUUID(mostSignificantBits, leastSignificantBits)`
+
+To obtain the base64 representation you have to call `suuid.toBase64()`. The method `toString()` prints the same as it's corresponding UUID.
+
 # How suuid works
 
 It's actually an extension of `java.util.UUID` class, but since this class is final the workaround is to wrap it and delegate.
