@@ -16,7 +16,9 @@ public class SUUIDTest {
     @Test
     public void encodeDecodeTest(){
         String hexString = uuid.toString();
-        String base64String = new SUUID(uuid).toBase64();
+	assertEquals(uuid.toString(), hexString);
+        String base64String = new SUUID(uuid).toBase64(); // cMyxY-HEQHmPnU0JG_UedQ
+	assertEquals(22, base64String.length());
         System.out.println(hexString + " -> " + base64String);
         assertEquals(uuid, SUUID.fromBase64(base64String).getUuid());
         assertEquals(uuid, SUUID.fromString(hexString).getUuid());
